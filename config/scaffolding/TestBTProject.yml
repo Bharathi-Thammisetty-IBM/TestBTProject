@@ -7,8 +7,69 @@ packages:
   gitUrl: https://github.com/Bharathi-Thammisetty-IBM
   gitUsername: Bharathi-Thammisetty-IBM
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
 services:
+- serviceName: project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:dbconn
+  packages:
+  - name: TestBTProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.testbt.integrations:DB_git
   packages:
   - name: TestBTProject
     version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+configurationVariables:
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.transactionType
+  : LOCAL_TRANSACTION
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.oracle.OracleDataSource
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.otherProperties
+  : ""
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.password
+  : "{AES}gOk3wygfWVjWqDc4SLehnQ=="
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.networkProtocol
+  : ""
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionManagerSettings.poolable
+  : "true"
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.dbType
+  : ORACLE
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.keyStore
+  : ""
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.databaseName
+  : ORCL
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.portNumber
+  : "1521"
+  artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionEnabled: "false"
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.trustStore
+  : ""
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.user
+  : JDBC_BVT
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.TestBTProject.project.testbt.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.dbconn.connectionSettings.serverName
+  : adapter-oracle-121-on-amazonrds.cdmjexwbzoym.us-east-1.rds.amazonaws.com
